@@ -24,25 +24,23 @@ function setup() {
 
   strokeWeight(1);
 
-  //draw stars that are 100 pixels wide and go all the way to the end
+  star(200, 200, 100, 5)
+  star(300, 250, 200, 10)
+  star(250, 250, 50, 4)
 
-  //drawing a column of stars
-  for (let y = 50; y < height; y += 100) {
-    star(50, y, 100, 5);
-  }
+  
+push();
+noFill();
 
-  //drawing a row of stars
-  for (let x = 50; x < width; x += 100) {
-    star(x, 50, 100, 5);
-  }
+translate(500, 300);
+for(let d = 20; d < 1220; d+= 20){
+  print(d); //asking javascript to print the value of d everytime it runs the code
+  ellipse(0, 0, d);
+}
 
-  //drawing a column of rows
-  for (let y = 50; y < height; y += 100) {
-    star(50, y, 100, 5);
+translate(-15, 0);
+for(let d = 20; d < 1220; d += 20){
+  ellipse(0, 0, d);
+}
 
-    //drawing a row of stars
-    for (let x = 50; x < width; x += 100) {
-      star(x, y, 100, 15);
-    }
-  }
 }
